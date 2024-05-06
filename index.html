@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Simple Easy Quiz</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="head-page">
+        <h1 class="title-page">Easy Quiz</h1>
+    </div>
+   <div class="quiz-container">
+        <div class="quiz-card">
+            <p>ข้อที่ 1 PIM ย่อมาจากอะไร ?</p>
+            <button class="button" onclick="checkAnswer(this, 'a', 1)">A) พีไอเอ็ม</button>
+            <button class="button" onclick="checkAnswer(this, 'b', 1)">B) ปิ๋ม</button>
+            <button class="button" onclick="checkAnswer(this, 'c', 1)">C) พิม</button>
+            <button class="button" onclick="checkAnswer(this, 'd', 1)">D) ภีม</button>
+            <p id="result1"></p>
+        </div>
+        <hr >
+        <div class="quiz-card">
+            <p>ข้อที่ 2 Gosoft เป็นบริษัทในเครือบริษัทอะไร ?</p>
+            <button class="button" onclick="checkAnswer(this, 'a', 2)">A) AWS</button>
+            <button class="button" onclick="checkAnswer(this, 'b', 2)">B) Microsoft</button>
+            <button class="button" onclick="checkAnswer(this, 'c', 2)">C) CPALL</button>
+            <button class="button" onclick="checkAnswer(this, 'd', 2)">D) Google</button>
+            <p id="result2"></p>
+        </div>
+   </div>
+    <div class="sendAnswer-and-summary">
+        <div id="summary">
+            <h3 id="result-summary"></h3>
+        </div>
+        <div id="sendAnswer">
+            <button class="button" id="sendAnswerButton" disabled="true" onclick="sendAnswer()">ส่งคำตอบ</button>
+        </div>
+        <div id="reset-form">
+            <button class="button" onclick="resetForm()">ลองใหม่อีกครั้ง</button>
+        </div>
+    </div>
+   <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
