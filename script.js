@@ -20,6 +20,11 @@ myObject.onmessage = function(event) {
 }
 myObject.postMessage("I'm ready!");
 
+if(myObject){
+    const resutlTitle = document.getElementById(`result-body`);
+    resutlTitle.textContent = `webviewbody`;
+}
+
 myObject.addEventListener('message', listener);
 
 function listener(event){
