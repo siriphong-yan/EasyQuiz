@@ -20,11 +20,11 @@ myObject.onmessage = function(event) {
 }
 myObject.postMessage("I'm ready!");
 
-myObject.addEventListener('load', listener);
+myObject.addEventListener('message', listener);
 
 function listener(event){
     const resutlTitle = document.getElementById(`result-body`);
-    resutlTitle.textContent = `ftabeck`;
+    resutlTitle.textContent = `feeback::${event.data}`;
 }
 
 function checkAnswer(e, answer, numOfQues) {
