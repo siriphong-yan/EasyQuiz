@@ -20,6 +20,13 @@ myObject.onmessage = function(event) {
 }
 myObject.postMessage("I'm ready!");
 
+myObject.addEventListener('load', listener);
+
+function listener(event){
+    const resutlTitle = document.getElementById(`result-body`);
+    resutlTitle.textContent = `ftabeck`;
+}
+
 function checkAnswer(e, answer, numOfQues) {
     const buttonSelected = e.parentElement.querySelectorAll('.button-selected');
     if(buttonSelected.length){
