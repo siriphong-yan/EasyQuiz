@@ -15,6 +15,8 @@ const answerList = [
 myObject.onmessage = function(event) {
     // prints "Got it!" when we receive the app's response.
     console.log(event.data);
+    const resutlTitle = document.getElementById(`result-title`);
+    resutlTitle.textContent = `title frow webView : ${event.data}`;
 }
 myObject.postMessage("I'm ready!");
 
