@@ -12,6 +12,12 @@ const answerList = [
     }
 ];
 
+myObject.onmessage = function(event) {
+    // prints "Got it!" when we receive the app's response.
+    console.log(event.data);
+}
+myObject.postMessage("I'm ready!");
+
 function checkAnswer(e, answer, numOfQues) {
     const buttonSelected = e.parentElement.querySelectorAll('.button-selected');
     if(buttonSelected.length){
